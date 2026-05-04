@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills — Rayane Debbarh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    .skill-bar-wrap { margin-top: 10px; }
+    .skill-bar-row { margin-bottom: 14px; }
+    .skill-bar-label { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px; }
+    .skill-bar-label span:last-child { color: var(--teal); font-weight: 600; }
+    .skill-bar-track { height: 3px; background: rgba(255,255,255,0.06); position: relative; overflow: hidden; }
+    .skill-bar-fill {
+      position: absolute; left: 0; top: 0; height: 100%;
+      background: linear-gradient(90deg, var(--teal), var(--blue));
+      width: 0; transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+    }
+    .skill-bar-fill.animated { width: var(--pct); }
+
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-top: 8px; }
+
+    .inventory-section { margin-bottom: 64px; }
+    .inventory-section-title {
+      font-family: var(--heading); font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 4px; text-transform: uppercase; color: var(--text-muted);
+      margin-bottom: 24px; display: flex; align-items: center; gap: 16px;
+    }
+    .inventory-section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .lang-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+    .lang-card {
+      background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;
+      transition: border-color 0.22s, transform 0.22s;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .lang-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+    .lang-card-top { display: flex; align-items: center; justify-content: space-between; }
+    .lang-name { font-family: var(--heading); font-size: 1.3rem; font-weight: 700; color: #fff; }
+    .lang-level {
+      font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase;
+      padding: 3px 8px; background: var(--teal-dim); color: var(--teal);
+      border: 1px solid rgba(0,212,200,0.25);
+    }
+    .lang-dots { display: flex; gap: 5px; }
+    .lang-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); transition: background 0.2s; }
+    .lang-dot.filled { background: var(--teal); box-shadow: 0 0 6px rgba(0,212,200,0.5); }
+
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+    .tool-pill {
+      background: var(--bg-card); border: 1px solid var(--border);
+      padding: 14px 16px; text-align: center; transition: border-color 0.22s, background 0.22s;
+    }
+    .tool-pill:hover { border-color: rgba(0,212,200,0.4); background: var(--teal-dim); }
+    .tool-pill-name { font-size: 0.85rem; font-weight: 600; color: var(--text); display: block; }
+    .tool-pill-type { font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 4px; display: block; }
+  </style>
+</head>
+<body>
+
+<div class="page-hero">
+  <p class="page-hero-label">Skills</p>
+  <h1 class="page-hero-title">MY<br><span class="accent">TOOLKIT</span></h1>
+  <p class="page-hero-sub">Languages, engines, tools, and concepts. Everything in my loadout.</p>
+</div>
+
+<div class="page-content">
+
+  <!-- ── LANGUAGES ─────────────────────────────────── -->
+  <div class="inventory-section fade-in">
+    <p class="inventory-section-title">Languages</p>
+    <div class="lang-grid">
+
+      <div class="lang-card">
+        <div class="lang-card-top">
+          <span class="lang-name">Python</span>
+          <span class="lang-level">Proficient</span>
+        </div>
+        <div class="lang-dots">
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot"></span>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:80%"></div></div>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-card-top">
+          <span class="lang-name">Java</span>
+          <span class="lang-level">Proficient</span>
+        </div>
+        <div class="lang-dots">
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot"></span>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:78%"></div></div>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-card-top">
+          <span class="lang-name">HTML</span>
+          <span class="lang-level">Proficient</span>
+        </div>
+        <div class="lang-dots">
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot"></span>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:82%"></div></div>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-card-top">
+          <span class="lang-name">CSS</span>
+          <span class="lang-level">Proficient</span>
+        </div>
+        <div class="lang-dots">
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot"></span>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:80%"></div></div>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-card-top">
+          <span class="lang-name">JavaScript</span>
+          <span class="lang-level">Proficient</span>
+        </div>
+        <div class="lang-dots">
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot"></span>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:78%"></div></div>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-card-top">
+          <span class="lang-name">Lua</span>
+          <span class="lang-level">Proficient</span>
+        </div>
+        <div class="lang-dots">
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot"></span>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:75%"></div></div>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-card-top">
+          <span class="lang-name">SQL</span>
+          <span class="lang-level">Familiar</span>
+        </div>
+        <div class="lang-dots">
+          <span class="lang-dot filled"></span><span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span><span class="lang-dot"></span>
+          <span class="lang-dot"></span>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:60%"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── TOOLS & ENGINES ──────────────────────────── -->
+  <div class="inventory-section fade-in">
+    <p class="inventory-section-title">Tools &amp; Engines</p>
+    <div class="tools-grid">
+      <div class="tool-pill"><span class="tool-pill-name">Roblox Studio</span><span class="tool-pill-type">Game Engine</span></div>
+      <div class="tool-pill"><span class="tool-pill-name">Pygame</span><span class="tool-pill-type">Game Library</span></div>
+      <div class="tool-pill"><span class="tool-pill-name">Spring Boot</span><span class="tool-pill-type">Framework</span></div>
+      <div class="tool-pill"><span class="tool-pill-name">Git</span><span class="tool-pill-type">Version Control</span></div>
+      <div class="tool-pill"><span class="tool-pill-name">GitHub</span><span class="tool-pill-type">Collaboration</span></div>
+      <div class="tool-pill"><span class="tool-pill-name">VS Code</span><span class="tool-pill-type">Editor</span></div>
+      <div class="tool-pill"><span class="tool-pill-name">IntelliJ IDEA</span><span class="tool-pill-type">IDE</span></div>
+      <div class="tool-pill"><span class="tool-pill-name">Swagger</span><span class="tool-pill-type">API Docs</span></div>
+    </div>
+  </div>
+
+  <!-- ── CONCEPTS ──────────────────────────────────── -->
+  <div class="inventory-section fade-in">
+    <p class="inventory-section-title">Concepts &amp; Practices</p>
+    <div class="skills-tree">
+      <div class="skills-node">
+        <div class="skills-node-head">
+          <span class="skills-node-icon">💻</span>
+          <span class="skills-node-title">Software Dev</span>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">Object-Oriented Programming</span>
+          <span class="skill-pill">Data Structures</span>
+          <span class="skill-pill">Algorithms</span>
+          <span class="skill-pill">REST APIs</span>
+          <span class="skill-pill">CRUD Operations</span>
+        </div>
+      </div>
+      <div class="skills-node">
+        <div class="skills-node-head">
+          <span class="skills-node-icon">🎮</span>
+          <span class="skills-node-title">Game Dev</span>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">Game Loop Design</span>
+          <span class="skill-pill">Sprite Animation</span>
+          <span class="skill-pill">Terrain Sculpting</span>
+          <span class="skill-pill">Level Design</span>
+          <span class="skill-pill">Collision Detection</span>
+        </div>
+      </div>
+      <div class="skills-node">
+        <div class="skills-node-head">
+          <span class="skills-node-icon">🔁</span>
+          <span class="skills-node-title">Dev Practices</span>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">Agile</span>
+          <span class="skill-pill">Version Control</span>
+          <span class="skill-pill">Code Review</span>
+          <span class="skill-pill">Technical Writing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CERTIFICATIONS ────────────────────────────── -->
+  <div class="inventory-section fade-in">
+    <p class="inventory-section-title">Certifications</p>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <span class="cert-icon">🎮</span>
+        <div>
+          <p class="cert-name">The Complete 2026 Roblox Studio Masterclass</p>
+          <p class="cert-meta">Udemy &nbsp;·&nbsp; April 2026</p>
+        </div>
+      </div>
+      <div class="cert-card">
+        <span class="cert-icon">💻</span>
+        <div>
+          <p class="cert-name">Full-Stack Web Development: PHP, HTML, CSS &amp; JavaScript</p>
+          <p class="cert-meta">Board Infinity &nbsp;·&nbsp; July 2025</p>
+        </div>
+      </div>
+      <div class="cert-card">
+        <span class="cert-icon">🌐</span>
+        <div>
+          <p class="cert-name">Build Your Portfolio Website with HTML and CSS</p>
+          <p class="cert-meta">Coursera &nbsp;·&nbsp; March 2025</p>
+        </div>
+      </div>
+    </div>
+    <p style="color:var(--text-muted);font-size:0.8rem;margin-top:20px;font-style:italic;">
+      More certifications coming soon — currently working toward additional credentials in game dev and CS.
+    </p>
+  </div>
+
+</div>
+
+<script src="shared.js?v=3"></script>
+
+<script>
+  // Animate skill bars when visible
+  document.addEventListener('DOMContentLoaded', function () {
+    var bars = document.querySelectorAll('.skill-bar-fill');
+    var barObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          setTimeout(function () { e.target.classList.add('animated'); }, 200);
+          barObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    bars.forEach(function (b) { barObserver.observe(b); });
+  });
+</script>
+</body>
+</html>

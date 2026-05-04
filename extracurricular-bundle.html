@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extracurricular — Rayane Debbarh</title>
+  <!-- JS-referenced carousel images -->
+  <meta name="ext-resource-dependency" content="../uploads/Screenshot 2026-04-28 at 9.04.46 PM.png" data-resource-id="fmsc1" />
+  <meta name="ext-resource-dependency" content="../uploads/Screenshot 2026-04-28 at 9.36.34 PM.png" data-resource-id="plaid1" />
+  <meta name="ext-resource-dependency" content="../uploads/Screenshot 2026-04-28 at 9.36.45 PM.png" data-resource-id="plaid2" />
+  <meta name="ext-resource-dependency" content="../uploads/Screenshot 2026-04-28 at 9.36.54 PM.png" data-resource-id="plaid3" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    .exc-carousel { position: relative; overflow: hidden; background: #000; }
+    .exc-carousel .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: #fff; border: 1px solid rgba(255,255,255,0.15); width: 36px; height: 36px; cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; transition: background 0.2s; z-index: 10; }
+    .exc-carousel .carousel-btn:hover { background: rgba(0,212,200,0.7); }
+    .exc-carousel .carousel-btn.prev { left: 10px; }
+    .exc-carousel .carousel-btn.next { right: 10px; }
+    .exc-carousel .carousel-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 10; }
+    .exc-carousel .carousel-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3); border: none; cursor: pointer; padding: 0; transition: background 0.2s; }
+    .exc-carousel .carousel-dot.active { background: var(--teal); }
+    .exc-carousel .carousel-counter { position: absolute; top: 10px; right: 12px; z-index: 10; font-size: 0.68rem; color: rgba(255,255,255,0.6); background: rgba(0,0,0,0.45); padding: 3px 8px; }
+  </style>
+</head>
+<body>
+
+<div class="page-hero">
+  <p class="page-hero-label">Extracurricular</p>
+  <h1 class="page-hero-title">BEYOND THE<br><span class="accent">SCREEN</span></h1>
+  <p class="page-hero-sub">Athletics, leadership, and campus involvement. What I do when I'm not coding.</p>
+</div>
+
+<div class="page-content">
+
+  <!-- ── SWIM TEAM ─────────────────────────────────── -->
+  <div class="fade-in" style="margin-bottom:64px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;">
+
+      <div>
+        <p class="page-hero-label" style="margin-bottom:10px;">Athletics</p>
+        <h2 style="font-family:var(--heading);font-size:2.8rem;font-weight:800;color:#fff;line-height:1;margin-bottom:8px;">
+          Varsity Swim Team
+        </h2>
+        <p style="color:var(--teal);font-size:0.78rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:20px;">
+          Alma College Athletics &nbsp;·&nbsp; Aug 2025 – Present
+        </p>
+        <p style="color:var(--text-muted);font-size:0.96rem;line-height:1.8;margin-bottom:18px;text-wrap:pretty;">
+          Competing at the NCAA Division III level as a full-time CS student. Practice starts before most people are awake, and balancing that with coursework, projects, and campus involvement has shaped how I approach everything — tight schedules, consistent output, no excuses.
+        </p>
+        <p style="color:var(--text-muted);font-size:0.96rem;line-height:1.8;margin-bottom:28px;text-wrap:pretty;">
+          The discipline of competitive swimming translates directly into software development. You don't skip sets because they're hard, and you don't skip edge cases because they're inconvenient. The mindset is the same.
+        </p>
+        <div class="tag-list">
+          <span class="tag teal">NCAA Division III</span>
+          <span class="tag">Freestyle</span>
+          <span class="tag">Butterfly</span>
+          <span class="tag">Breaststroke</span>
+          <span class="tag">Team Athlete</span>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <!-- SWIM COMPETITION PHOTO — full width, full frame -->
+        <img src="../uploads/IMG_1449.jpeg" alt="Rayane competing in the pool"
+          style="width:100%;object-fit:contain;border:1px solid var(--border);filter:brightness(0.85);display:block;" />
+        <!-- UNIFORM + FLAG PHOTOS — side by side, full frame -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <img src="../uploads/IMG_1501.jpeg" alt="Rayane in Alma swim team uniform"
+            style="width:100%;object-fit:contain;border:1px solid var(--border);filter:brightness(0.85);display:block;" />
+          <img src="../uploads/IMG_1618.jpeg" alt="Rayane holding Alma flag in swim gear"
+            style="width:100%;object-fit:contain;border:1px solid var(--border);filter:brightness(0.85);display:block;" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="full-divider" style="margin-bottom:64px;" />
+
+  <!-- ── CAMPUS CLUBS & LEADERSHIP ─────────────────── -->
+  <div class="fade-in" style="margin-bottom:64px;">
+    <p class="page-hero-label" style="margin-bottom:10px;">Leadership</p>
+    <h2 style="font-family:var(--heading);font-size:2.8rem;font-weight:800;color:#fff;line-height:1;margin-bottom:8px;">
+      Campus Clubs &amp; Organizations
+    </h2>
+    <p style="color:var(--teal);font-size:0.78rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:28px;">
+      Alma College &nbsp;·&nbsp; 2023 – Present
+    </p>
+
+    <div class="extras-grid">
+
+      <div class="extra-card">
+        <!-- BPA GROUP PHOTO at State Conference -->
+        <img class="extra-thumb" src="../uploads/Screenshot 2026-04-28 at 8.40.55 PM.png" alt="Alma BPA team at Michigan State Conference" />
+        <div class="extra-body">
+          <h3 class="extra-title">Business Professionals of America</h3>
+          <p class="extra-sub">BPA Chapter — Active Member</p>
+          <p class="extra-desc">
+            Competed at the Michigan BPA 54th Annual State Leadership Conference (Feb 2026, Grand Rapids) and won 1st Place in Fundamentals of Web Design. Represented Alma College alongside the full chapter team.
+          </p>
+          <div class="tag-list" style="margin-top:14px;">
+            <span class="tag teal">🏆 1st Place — State</span>
+            <span class="tag">Web Design</span>
+            <span class="tag">Feb 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="extra-card">
+        <!-- FORMAL EVENT PHOTO -->
+        <img class="extra-thumb" src="../uploads/IMG_0907.jpeg" alt="Rayane at campus formal event" style="height: 295px; object-fit: cover" />
+        <div class="extra-body">
+          <h3 class="extra-title">Squirrel Club</h3>
+          <p class="extra-sub">President</p>
+          <p class="extra-desc">
+            Serve as President of the Squirrel Club at Alma College — leading meetings, organizing events, and keeping the group running smoothly.
+          </p>
+          <div class="tag-list" style="margin-top:14px;">
+            <span class="tag teal">President</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="extra-card">
+        <!-- FORMAL EVENT 2 -->
+        <img class="extra-thumb" src="../uploads/IMG_1140.jpeg" alt="Rayane at formal event" />
+        <div class="extra-body">
+          <h3 class="extra-title">International Club</h3>
+          <p class="extra-sub">Vice President of Finance</p>
+          <p class="extra-desc">
+            Manage the financial operations of the International Club — budgeting, funding requests, and financial reporting for club events and activities.
+          </p>
+          <div class="tag-list" style="margin-top:14px;">
+            <span class="tag teal">VP Finance</span>
+            <span class="tag">Leadership</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── VOLUNTEER ──────────────────────────────────── -->
+  <div class="fade-in" style="margin-top:64px;">
+    <p class="page-hero-label" style="margin-bottom:10px;">Volunteer Work</p>
+    <h2 style="font-family:var(--heading);font-size:2.8rem;font-weight:800;color:#fff;line-height:1;margin-bottom:8px;">
+      Giving Back
+    </h2>
+    <p style="color:var(--teal);font-size:0.78rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:28px;">
+      Community &amp; Service &nbsp;·&nbsp; Alma College
+    </p>
+
+    <div class="extras-grid">
+
+      <!-- FEED MY STARVING CHILDREN — carousel -->
+      <div class="extra-card">
+        <div class="exc-carousel" id="exc-fmsc">
+          <img class="exc-carousel-img" src="../uploads/Screenshot 2026-04-28 at 9.04.46 PM.png"
+            alt="Feed My Starving Children" style="width:100%;height:280px;object-fit:cover;display:block;" />
+          <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+          <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+          <div class="carousel-dots"></div>
+          <span class="carousel-counter"></span>
+        </div>
+        <div class="extra-body">
+          <h3 class="extra-title">Feed My Starving Children</h3>
+          <p class="extra-sub">Volunteer &nbsp;·&nbsp; Mobile Pack Site</p>
+          <p class="extra-desc">
+            Joined Alma College volunteers at a Feed My Starving Children mobile pack site — packaging nutritious meals for children around the world. A hands-on reminder that impact can happen anywhere, including small towns.
+          </p>
+          <div class="tag-list" style="margin-top:14px;">
+            <span class="tag teal">Community Service</span>
+            <span class="tag">Alma College</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLAIDWORKS — carousel -->
+      <div class="extra-card">
+        <div class="exc-carousel" id="exc-plaid">
+          <img class="exc-carousel-img" src="../uploads/Screenshot 2026-04-28 at 9.36.34 PM.png"
+            alt="PlaidWorks farm" style="width:100%;height:280px;object-fit:cover;display:block;" />
+          <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+          <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+          <div class="carousel-dots"></div>
+          <span class="carousel-counter"></span>
+        </div>
+        <div class="extra-body">
+          <h3 class="extra-title">PlaidWorks Micro-Internship</h3>
+          <p class="extra-sub">Farm Volunteer &nbsp;·&nbsp; Alma, MI &nbsp;·&nbsp; Summer 2024</p>
+          <p class="extra-desc">
+            Completed a PlaidWorks micro-internship at a small farm in Alma — watering crops, cultivating vegetables, and helping with daily farm tasks. Awarded the <strong style="color:var(--teal);">PlaidWorks Micro-Internship Award</strong> by Alma College (Jul 2024). Deepened my commitment to community service and sustainable agriculture.
+          </p>
+          <div class="tag-list" style="margin-top:14px;">
+            <span class="tag teal">🏅 PlaidWorks Award</span>
+            <span class="tag">Alma College</span>
+            <span class="tag">Sustainable Agriculture</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMMUNITY KITCHEN -->
+      <div class="extra-card">
+        <img class="extra-thumb" src="../uploads/IMG_5843.jpeg"
+          alt="Volunteering at community kitchen" style="height:280px;object-fit:cover;" />
+        <div class="extra-body">
+          <h3 class="extra-title">Community Kitchen Volunteer</h3>
+          <p class="extra-sub">Food Service &nbsp;·&nbsp; Community Shelter</p>
+          <p class="extra-desc">
+            Volunteered at a local community kitchen, helping prepare and serve meals to those in need. Hands-on service work that reinforced the importance of showing up for your community beyond the campus bubble.
+          </p>
+          <div class="tag-list" style="margin-top:14px;">
+            <span class="tag teal">Community Service</span>
+            <span class="tag">Food Security</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="full-divider" style="margin-bottom:64px;margin-top:64px;" />
+
+  <!-- ── OTHER CLUBS ──────────────────────────────── -->
+  <div class="fade-in" style="margin-top:48px;">
+    <p class="page-hero-label" style="margin-bottom:10px;">Other Clubs</p>
+    <h2 style="font-family:var(--heading);font-size:2rem;font-weight:800;color:#fff;line-height:1;margin-bottom:20px;">Also a Member Of</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;">
+      <span class="hud-badge">Arabic Club</span>
+      <span class="hud-badge">French Club</span>
+      <span class="hud-badge">International Club</span>
+      <span class="hud-badge">BPA (Business Professionals of America)</span>
+      <span class="hud-badge">Squirrel Club</span>
+    </div>
+  </div>
+
+  <hr class="full-divider" style="margin-bottom:64px;margin-top:64px;" />
+
+  <!-- ── GLOBAL FELLOWSHIP ──────────────────────────── -->
+  <div class="fade-in">
+    <p class="page-hero-label" style="margin-bottom:10px;">Fellowship &amp; Internship</p>
+    <h2 style="font-family:var(--heading);font-size:2.8rem;font-weight:800;color:#fff;line-height:1;margin-bottom:8px;">
+      Posey Global Fellowship
+    </h2>
+    <p style="color:var(--teal);font-size:0.78rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:28px;">
+      Osgood Center for International Studies — Washington, D.C. &nbsp;·&nbsp; Summer 2025 &nbsp;·&nbsp; Internship
+    </p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;">
+      <p style="color:var(--text-muted);font-size:0.96rem;line-height:1.8;text-wrap:pretty;">
+        Selected through a competitive process to intern at a Washington D.C. think tank conducting international policy and AI research alongside scholars from around the world. Took me out of my CS comfort zone entirely — and that was the point. Communicating complex ideas to non-technical audiences, collaborating with people from completely different fields, presenting research under scrutiny: all of it made me a sharper thinker and a cleaner communicator.
+      </p>
+    </div>
+
+    <!-- PHOTO GALLERY — D.C. internship: 2-col, left has 2 tall, right has 3 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px;max-width:860px;align-items:start;">
+      <!-- LEFT COLUMN: 2 tall portrait photos -->
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <img src="../uploads/IMG_3743.jpg" alt="Rayane in front of government building in D.C."
+          style="width:100%;height:auto;object-fit:contain;border:1px solid var(--border);display:block;" />
+        <img src="../uploads/IMG_3745.JPG" alt="Rayane and team at Osgood Center internship conference"
+          style="width:100%;height:auto;object-fit:contain;border:1px solid var(--border);display:block;" />
+      </div>
+      <!-- RIGHT COLUMN: 3 photos stacked -->
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <img src="../uploads/IMG_3744.JPG" alt="Rayane and fellows on Washington D.C. street"
+          style="width:100%;height:auto;object-fit:cover;object-position:center;border:1px solid var(--border);display:block;" />
+        <img src="../uploads/IMG_3746.JPG" alt="Rayane and fellows in front of White House"
+          style="width:100%;height:auto;object-fit:cover;object-position:center top;border:1px solid var(--border);display:block;" />
+        <img src="../uploads/IMG_5026 3.jpg" alt="Internship presentation session"
+          style="width:100%;height:auto;object-fit:contain;border:1px solid var(--border);display:block;" />
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ── SHARED NAV + FOOTER INJECTION ──────────────────────────────────────────
+(function () {
+  const NAV_HTML = `
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">RD</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="experience.html">Work Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="extracurricular.html">Extracurricular</a></li>
+      <li><a href="skills.html">Skills</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-ham" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</nav>`;
+
+  const FOOTER_HTML = `
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-name">Rayane Debbarh</p>
+    <p class="footer-tagline">Let's build something worth playing.</p>
+    <div class="footer-links">
+      <a href="mailto:debbarh1a@alma.edu" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Email</a>
+      <a href="https://www.linkedin.com/in/rayane-debbarh" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/rayanedebbarh" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="../uploads/Resume April.pdf" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-solid fa-file-pdf"></i> Resume</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Rayane Debbarh</p>
+  </div>
+</footer>`;
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Inject nav + footer
+    document.body.insertAdjacentHTML('afterbegin', NAV_HTML);
+    document.body.insertAdjacentHTML('beforeend', FOOTER_HTML);
+
+    // Active link highlight
+    var path = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      if (a.getAttribute('href') === path) a.classList.add('active');
+    });
+
+    // Hamburger toggle
+    var ham = document.getElementById('nav-ham');
+    var links = document.getElementById('nav-links');
+    ham.addEventListener('click', function () {
+      links.classList.toggle('open');
+      ham.textContent = links.classList.contains('open') ? '✕' : '☰';
+    });
+    // Close menu on link click
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        links.classList.remove('open');
+        ham.textContent = '☰';
+      });
+    });
+
+    // Navbar scroll state
+    var nav = document.querySelector('.navbar');
+    function checkScroll() { nav.classList.toggle('scrolled', window.scrollY > 40); }
+    checkScroll();
+    window.addEventListener('scroll', checkScroll, { passive: true });
+
+    // Scroll fade-in
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(function (el) { observer.observe(el); });
+  });
+})();
+
+</script>
+
+<style>
+  @media (max-width: 780px) {
+    .page-content > div > div[style*="grid-template-columns:1fr 340px"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+
+<script>
+var __r = window.__resources || {};
+var EXC_CAROUSELS = {
+  'exc-fmsc': [
+    __r.fmsc1 || '../uploads/Screenshot 2026-04-28 at 9.04.46 PM.png'
+  ],
+  'exc-plaid': [
+    __r.plaid1 || '../uploads/Screenshot 2026-04-28 at 9.36.34 PM.png',
+    __r.plaid2 || '../uploads/Screenshot 2026-04-28 at 9.36.45 PM.png',
+    __r.plaid3 || '../uploads/Screenshot 2026-04-28 at 9.36.54 PM.png'
+  ]
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  Object.keys(EXC_CAROUSELS).forEach(function (id) {
+    var imgs = EXC_CAROUSELS[id];
+    var el = document.getElementById(id);
+    if (!el || imgs.length === 0) return;
+    var imgEl = el.querySelector('.exc-carousel-img');
+    var dotsEl = el.querySelector('.carousel-dots');
+    var counter = el.querySelector('.carousel-counter');
+    var idx = 0;
+    var timer;
+
+    imgs.forEach(function (_, i) {
+      var d = document.createElement('button');
+      d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', function () { go(i); });
+      dotsEl.appendChild(d);
+    });
+
+    function updateCounter() { if (counter) counter.textContent = (idx + 1) + ' / ' + imgs.length; }
+
+    function go(n) {
+      idx = ((n % imgs.length) + imgs.length) % imgs.length;
+      imgEl.style.opacity = '0';
+      setTimeout(function () { imgEl.src = imgs[idx]; imgEl.style.opacity = '1'; }, 220);
+      el.querySelectorAll('.carousel-dot').forEach(function (d, i) { d.classList.toggle('active', i === idx); });
+      updateCounter();
+    }
+
+    function startAuto() {
+      clearInterval(timer);
+      if (imgs.length > 1) timer = setInterval(function () { go(idx + 1); }, 4000);
+    }
+
+    el.querySelector('.prev').addEventListener('click', function () { go(idx - 1); startAuto(); });
+    el.querySelector('.next').addEventListener('click', function () { go(idx + 1); startAuto(); });
+
+    if (imgs.length <= 1) {
+      el.querySelector('.prev').style.display = 'none';
+      el.querySelector('.next').style.display = 'none';
+      dotsEl.style.display = 'none';
+    }
+
+    updateCounter();
+    startAuto();
+  });
+});
+</script>
+</body>
+</html>
+
+<template id="__bundler_thumbnail" data-bg-color="#07090f">
+  <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <rect width="400" height="300" fill="#07090f"/>
+    <text x="200" y="120" font-family="sans-serif" font-size="48" font-weight="800" fill="#00d4c8" text-anchor="middle">RD</text>
+    <text x="200" y="160" font-family="sans-serif" font-size="14" fill="#7a87a0" text-anchor="middle" letter-spacing="4">EXTRACURRICULAR</text>
+    <line x1="160" y1="178" x2="240" y2="178" stroke="#00d4c8" stroke-width="1"/>
+  </svg>
+</template>

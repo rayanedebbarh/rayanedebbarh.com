@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Rayane Debbarh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    .projects-section-label {
+      font-family: var(--heading); font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 4px; text-transform: uppercase; color: var(--text-muted);
+      margin-bottom: 24px; margin-top: 56px;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .projects-section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ── GAME CARDS ── */
+    .games-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .game-card-big {
+      background: var(--bg-card); border: 1px solid var(--border); overflow: hidden;
+      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+      display: flex; flex-direction: column;
+    }
+    .game-card-big:hover {
+      border-color: var(--teal); transform: translateY(-4px);
+      box-shadow: 0 20px 56px rgba(0,212,200,0.12);
+    }
+    .game-body { padding: 26px; flex: 1; display: flex; flex-direction: column; }
+    .game-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .game-type { font-size: 0.63rem; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); }
+    .game-status {
+      font-size: 0.63rem; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--text-muted); background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border); padding: 3px 8px;
+    }
+    .game-title { font-family: var(--heading); font-size: 1.9rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+    .game-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px; text-wrap: pretty; }
+    .game-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; padding-top: 18px; }
+
+    /* ── CAROUSEL ── */
+    .carousel {
+      position: relative; overflow: hidden;
+      background: #000;
+    }
+    .carousel-img {
+      width: 100%; height: 300px; max-height: 300px;
+      object-fit: cover; background: #000;
+      display: block; transition: opacity 0.4s ease;
+    }
+    .carousel-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(0,0,0,0.6); color: #fff; border: 1px solid rgba(255,255,255,0.15);
+      width: 36px; height: 36px; cursor: pointer; font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s, border-color 0.2s; z-index: 10;
+      user-select: none;
+    }
+    .carousel-btn:hover { background: rgba(0,212,200,0.7); border-color: var(--teal); }
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+    .carousel-dots {
+      position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 6px; z-index: 10;
+    }
+    .carousel-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(255,255,255,0.3); border: none; cursor: pointer; padding: 0;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .carousel-dot.active { background: var(--teal); transform: scale(1.3); }
+    .carousel-counter {
+      position: absolute; top: 10px; right: 12px; z-index: 10;
+      font-size: 0.68rem; color: rgba(255,255,255,0.6);
+      background: rgba(0,0,0,0.45); padding: 3px 8px; letter-spacing: 1px;
+    }
+
+    /* ── CS GRID ── */
+    .project-links-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: auto; }
+    .cs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
+
+    @media (max-width: 900px) {
+      .games-grid { grid-template-columns: 1fr; }
+      .cs-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .cs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-hero">
+  <p class="page-hero-label">Projects</p>
+  <h1 class="page-hero-title">WHAT I'VE<br><span class="accent">BUILT</span></h1>
+  <p class="page-hero-sub">Games, systems, and tools — built from scratch, each one teaching me something the next one needed.</p>
+</div>
+
+<div class="page-content">
+
+  <!-- ── ROBLOX GAMES ────────────────────────────── -->
+  <p class="projects-section-label fade-in">Featured Games</p>
+
+  <div class="games-grid fade-in">
+
+    <!-- SKY OBBY -->
+    <div class="game-card-big">
+      <div class="carousel" id="carousel-sky">
+        <img class="carousel-img" src="../uploads/Screenshot 2026-04-28 at 8.26.02 PM.png" alt="Sky Obby" />
+        <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+        <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+        <div class="carousel-dots"></div>
+        <span class="carousel-counter"></span>
+      </div>
+      <div class="game-body">
+        <div class="game-meta">
+          <span class="game-type">&#9658; Roblox Studio</span>
+          <span class="game-status">Published</span>
+        </div>
+        <h2 class="game-title">Sky Obby</h2>
+        <p class="game-desc">Five stages set against towering snowy mountains. Lava floors, spinning platforms, precision jumps, colour-coded gauntlets — each stage has its own mechanic and visual theme. Built with a timer system, stage checkpoints, and escalating difficulty.</p>
+        <div class="tag-list">
+          <span class="tag teal">Roblox Studio</span>
+          <span class="tag teal">Lua</span>
+          <span class="tag">Level Design</span>
+          <span class="tag">Timer System</span>
+          <span class="tag">5 Stages</span>
+          <span class="tag">Checkpoints</span>
+        </div>
+        <div class="game-actions">
+          <!-- SKY CHALLENGE ROBLOX LINK -->
+          <a href="https://www.roblox.com/games/88370592311845/Sky-Obby" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fa-solid fa-play"></i> Play on Roblox
+          </a>
+          <a href="https://github.com/rayanedebbarh/Sky-Obby" target="_blank" rel="noopener" class="btn btn-ghost">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- THE LOST OASIS -->
+    <div class="game-card-big">
+      <div class="carousel" id="carousel-oasis">
+        <img class="carousel-img" src="../uploads/oasis.png" alt="The Lost Oasis" />
+        <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+        <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+        <div class="carousel-dots"></div>
+        <span class="carousel-counter"></span>
+      </div>
+      <div class="game-body">
+        <div class="game-meta">
+          <span class="game-type">&#9658; Roblox Studio</span>
+          <span class="game-status">Published</span>
+        </div>
+        <h2 class="game-title">The Lost Oasis</h2>
+        <p class="game-desc">A cross-platform competitive desert adventure. Explore a hand-sculpted desert map, find 25 hidden ancient coins scattered across the dunes, and compete on a live leaderboard. Features a custom HUD, ambient sandstorm music via SoundService, and smooth cross-platform spawn &amp; touch detection for PC and mobile.</p>
+        <div class="tag-list">
+          <span class="tag teal">Roblox Studio</span>
+          <span class="tag teal">Lua</span>
+          <span class="tag">3D Terrain</span>
+          <span class="tag">Leaderboard</span>
+          <span class="tag">Custom HUD</span>
+          <span class="tag">Cross-Platform</span>
+        </div>
+        <div class="game-actions">
+          <!-- LOST OASIS ROBLOX LINK -->
+          <a href="https://www.roblox.com/games/90625758455741/The-Lost-Oasis" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fa-solid fa-play"></i> Play on Roblox
+          </a>
+          <a href="https://github.com/rayanedebbarh/THE-LOST-OASIS" target="_blank" rel="noopener" class="btn btn-ghost">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── 2D STREETFIGHTER ──────────────────────── -->
+  <p class="projects-section-label fade-in">Python Game</p>
+
+  <div class="fade-in" style="max-width:680px;">
+    <div class="game-card-big">
+      <div class="carousel" id="carousel-fight">
+        <img class="carousel-img" src="../uploads/Screenshot 2026-04-28 at 8.39.51 PM.png" alt="2D Multiplayer Streetfighter gameplay" />
+        <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+        <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+        <div class="carousel-dots"></div>
+        <span class="carousel-counter"></span>
+      </div>
+      <div class="game-body">
+        <div class="game-meta">
+          <span class="game-type">&#9658; Python / Pygame</span>
+          <span class="game-status">Complete</span>
+        </div>
+        <h2 class="game-title">2D Multiplayer Streetfighter</h2>
+        <p class="game-desc">A fully playable two-player fighting game with animated characters (The Witcher vs. Wizard), sound effects, and a round-based health system. Implements real-time player controls, special moves, collision detection, score tracking, and a full UI — welcome, pause, and victory screens with dynamic health bars.</p>
+        <div class="tag-list">
+          <span class="tag teal">Python</span>
+          <span class="tag teal">Pygame</span>
+          <span class="tag">OOP</span>
+          <span class="tag">Sprite Animation</span>
+          <span class="tag">Collision Detection</span>
+          <span class="tag">Sound Effects</span>
+        </div>
+        <div class="game-actions">
+          <a href="https://github.com/rayanedebbarh/2D_Streetfighter" target="_blank" rel="noopener" class="btn btn-outline">
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CS PROJECTS ────────────────────────────── -->
+  <p class="projects-section-label fade-in">CS Projects</p>
+
+  <div class="cs-grid fade-in">
+
+    <!-- Library Management System -->
+    <div class="project-card">
+      <img class="project-thumb" src="../uploads/Screenshot 2026-04-28 at 8.23.35 PM.png" alt="Library Management System" />
+      <div class="project-body">
+        <p class="project-type">&#9658; Full-Stack Web App</p>
+        <h3 class="project-name">Library Management System</h3>
+        <p class="project-desc">Manage books, libraries, and their relationships via a browser UI backed by a Java Spring Boot REST API. Full CRUD, Swagger docs, and relational database.</p>
+        <div class="tag-list">
+          <span class="tag">Java</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">REST API</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Swagger</span>
+        </div>
+        <a href="https://library-management-system-production-15f9.up.railway.app/web/" target="_blank" rel="noopener" class="project-link">Live Site <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://github.com/rayanedebbarh/Library-Management-System" target="_blank" rel="noopener" class="project-link">GitHub <i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Sweet Haven Bakery -->
+    <div class="project-card">
+      <img class="project-thumb" src="../uploads/Screenshot 2026-04-28 at 8.56.50 PM.png" alt="Sweet Haven Bakery website" style="object-fit:cover;object-position:center;" />
+      <div class="project-body">
+        <p class="project-type">&#9658; Web Design</p>
+        <h3 class="project-name">Sweet Haven Bakery</h3>
+        <p class="project-desc">A fully responsive bakery website featuring a menu, about section, and contact page. Clean layout with warm visuals, deployed live on GitHub Pages.</p>
+        <div class="tag-list">
+          <span class="tag teal">HTML/CSS/JS</span>
+          <span class="tag">Responsive</span>
+          <span class="tag">GitHub Pages</span>
+        </div>
+        <a href="https://rayanedebbarh.github.io/sweet-haven-bakery/" target="_blank" rel="noopener" class="project-link">Live Site <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://github.com/rayanedebbarh/sweet-haven-bakery" target="_blank" rel="noopener" class="project-link">GitHub <i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- AI API -->
+    <div class="project-card">
+      <img class="project-thumb" src="../uploads/Screenshot 2026-04-28 at 8.52.37 PM.png" alt="AI API web app" />
+      <div class="project-body">
+        <p class="project-type">&#9658; Web App / AI</p>
+        <h3 class="project-name">AI API</h3>
+        <p class="project-desc">A web-based AI assistant that lets users query multiple LLMs — ChatGPT, Claude, and Groq (LLaMA) — from a single clean interface. Built with HTML, CSS, and JavaScript.</p>
+        <div class="tag-list">
+          <span class="tag teal">JavaScript</span>
+          <span class="tag">API Integration</span>
+          <span class="tag">ChatGPT</span>
+          <span class="tag">Claude</span>
+          <span class="tag">LLaMA</span>
+        </div>
+        <a href="https://ai-api-ga55.onrender.com/docs" target="_blank" rel="noopener" class="project-link">Live Site <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://github.com/rayanedebbarh/ai-api" target="_blank" rel="noopener" class="project-link">GitHub <i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Employee Task Manager -->
+    <div class="project-card">
+      <img class="project-thumb" src="../uploads/Image 5-2-26 at 6.32 PM.png" alt="Employee Task Manager main menu" style="height:220px;object-fit:cover;" />
+      <div class="project-body">
+        <p class="project-type">&#9658; Java Application</p>
+        <h3 class="project-name">Layered Employee &amp; Task Manager</h3>
+        <p class="project-desc">Command-line Java app managing employees and tasks with full CRUD, search, and sorting. Structured across four architectural layers using the Repository Pattern and core OOP principles.</p>
+        <div class="tag-list">
+          <span class="tag">Java</span>
+          <span class="tag">OOP</span>
+          <span class="tag">Repository Pattern</span>
+          <span class="tag">Data Structures</span>
+        </div>
+        <a href="https://github.com/rayanedebbarh/EmployeeTaskManager" target="_blank" rel="noopener" class="project-link">GitHub <i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Unit Converter -->
+    <div class="project-card">
+      <img class="project-thumb" src="../uploads/Screenshot 2026-04-28 at 8.38.14 PM.png" alt="Unit Converter Web App" style="height:250px;object-fit:cover;" />
+      <div class="project-body">
+        <p class="project-type">&#9658; Web App</p>
+        <h3 class="project-name">Unit Converter Web App</h3>
+        <p class="project-desc">Converts between temperature, distance, and weight units. Clean interface with real-time conversion logic. Built with HTML, CSS, and JavaScript, deployed via GitHub Pages.</p>
+        <div class="tag-list">
+          <span class="tag teal">HTML/CSS/JS</span>
+          <span class="tag">GitHub Pages</span>
+          <span class="tag">Responsive</span>
+        </div>
+        <a href="https://rayanedebbarh.github.io/Unit-Converter-Web-App/" target="_blank" rel="noopener" class="project-link">Live Site <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://github.com/rayanedebbarh/Unit-Converter-Web-App" target="_blank" rel="noopener" class="project-link">GitHub <i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Campus Map -->
+    <div class="project-card">
+      <img class="project-thumb" src="../uploads/Screenshot 2026-04-28 at 8.38.41 PM.png" alt="Alma College Campus Map" />
+      <div class="project-body">
+        <p class="project-type">&#9658; Web App</p>
+        <h3 class="project-name">Campus Map</h3>
+        <p class="project-desc">Interactive Alma College campus map built with Leaflet.js and OpenStreetMap. Markers for key locations, popup details per building, dynamic rendering from structured data. Deployed on GitHub Pages.</p>
+        <div class="tag-list">
+          <span class="tag teal">JavaScript</span>
+          <span class="tag">Leaflet.js</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">GitHub Pages</span>
+        </div>
+        <a href="https://rayanedebbarh.github.io/campus-map/" target="_blank" rel="noopener" class="project-link">Live Site <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://github.com/rayanedebbarh/campus-map" target="_blank" rel="noopener" class="project-link">GitHub <i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Personal Portfolio -->
+    <div class="project-card">
+      <img class="project-thumb" src="../uploads/Screenshot 2026-04-28 at 8.39.24 PM.png" alt="Personal Portfolio Website" />
+      <div class="project-body">
+        <p class="project-type">&#9658; Web Design</p>
+        <h3 class="project-name">Personal Portfolio Website</h3>
+        <p class="project-desc">Fully responsive portfolio built with HTML5 and CSS3. Won 1st Place at Michigan BPA State Conference (Fundamentals of Web Design). Deployed on GitHub Pages.</p>
+        <div class="tag-list">
+          <span class="tag teal">HTML/CSS/JS</span>
+          <span class="tag">Responsive</span>
+          <span class="tag teal">BPA 1st Place</span>
+        </div>
+        <a href="https://rayanedebbarh.github.io" target="_blank" rel="noopener" class="project-link">Live Site <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://github.com/rayanedebbarh/rayanedebbarh.github.io" target="_blank" rel="noopener" class="project-link">GitHub <i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+  </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="shared.js?v=3"></script>
+
+<script>
+// ── CAROUSEL ENGINE ──────────────────────────────────────────
+var CAROUSELS = {
+  'carousel-oasis': [
+    '../uploads/oasis.png',
+    '../uploads/gameplay1.png',
+    '../uploads/map_iso.png',
+    '../uploads/map_top.png',
+    '../uploads/mobile.png',
+    '../uploads/pasted-1777426251573-0.png'
+  ],
+  'carousel-sky': [
+    '../uploads/Screenshot 2026-04-28 at 8.26.02 PM.png',
+    '../uploads/Screenshot 2026-04-28 at 8.26.14 PM.png',
+    '../uploads/Screenshot 2026-04-28 at 8.26.28 PM.png',
+    '../uploads/Screenshot 2026-04-28 at 8.26.40 PM.png',
+    '../uploads/Screenshot 2026-04-28 at 8.26.49 PM.png',
+    '../uploads/Screenshot 2026-04-28 at 8.27.00 PM.png',
+    '../uploads/Screenshot 2026-04-28 at 8.35.12 PM.png',
+    '../uploads/Screenshot 2026-04-28 at 8.35.29 PM.png'
+  ],
+  'carousel-fight': [
+    '../uploads/Screenshot 2026-04-28 at 8.39.51 PM.png'
+  ]
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  Object.keys(CAROUSELS).forEach(function (id) {
+    var imgs = CAROUSELS[id];
+    var el = document.getElementById(id);
+    if (!el || imgs.length === 0) return;
+
+    var imgEl = el.querySelector('.carousel-img');
+    var dotsEl = el.querySelector('.carousel-dots');
+    var counter = el.querySelector('.carousel-counter');
+    var idx = 0;
+    var timer;
+
+    // Build dots
+    imgs.forEach(function (_, i) {
+      var d = document.createElement('button');
+      d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', function () { go(i); });
+      dotsEl.appendChild(d);
+    });
+
+    function updateCounter() {
+      if (counter) counter.textContent = (idx + 1) + ' / ' + imgs.length;
+    }
+
+    function go(n) {
+      idx = ((n % imgs.length) + imgs.length) % imgs.length;
+      imgEl.style.opacity = '0';
+      setTimeout(function () {
+        imgEl.src = imgs[idx];
+        imgEl.style.opacity = '1';
+      }, 220);
+      el.querySelectorAll('.carousel-dot').forEach(function (d, i) {
+        d.classList.toggle('active', i === idx);
+      });
+      updateCounter();
+    }
+
+    function startAuto() {
+      clearInterval(timer);
+      if (imgs.length > 1) timer = setInterval(function () { go(idx + 1); }, 4000);
+    }
+
+    el.querySelector('.prev').addEventListener('click', function () { go(idx - 1); startAuto(); });
+    el.querySelector('.next').addEventListener('click', function () { go(idx + 1); startAuto(); });
+
+    // Hide arrows/dots if only one image
+    if (imgs.length <= 1) {
+      el.querySelector('.prev').style.display = 'none';
+      el.querySelector('.next').style.display = 'none';
+      dotsEl.style.display = 'none';
+    }
+
+    updateCounter();
+    startAuto();
+  });
+});
+</script>
+
+</body>
+</html>
