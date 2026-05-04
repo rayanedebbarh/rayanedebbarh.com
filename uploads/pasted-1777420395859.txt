@@ -1,0 +1,116 @@
+I want you to build me a multi-page personal portfolio website targeting game design & development internships. The site should feel like a AAA game studio portfolio: dark, immersive, with subtle animations and a strong visual identity. Dark background (deep navy or near-black), accent colors like electric blue or neon teal, sharp sans-serif headings, readable body font, smooth scroll transitions.
+⚠️ Design philosophy — READ THIS FIRST:
+Everything must feel human and personal, not generic. Write copy that sounds like a real person — specific, warm, confident. No filler phrases. Use the actual details I give you. If something sounds like every other CS student's portfolio, rewrite it until it doesn't. Make it feel like my site, not a template.
+
+SITE ARCHITECTURE:
+The site has a sticky top navbar with these section names lined up horizontally:
+About Me · Work Experience · Projects · Extracurricular Activities · Skills
+The homepage (index) is one long scrollable page that shows a summary/preview of every section — think of it as a highlight reel. Each section on the homepage has a "See More" or "View All" button that takes users to that section's dedicated full page with complete details.
+Exception for Projects: On the homepage, show exactly 4 projects (prioritize games), then a "Show More" button that navigates to the full Projects page where everything is listed.
+Pages to build:
+
+index.html — homepage with hero + all section previews
+about.html — full About Me
+experience.html — full Work Experience
+projects.html — all projects
+extracurricular.html — full Extracurricular Activities
+skills.html — full Skills
+
+
+HERO SECTION (homepage only):
+Full-screen opening. My name: Rayane Debbarh. Title: "Game Developer & CS Student." A short punchy tagline — make it specific to game dev, cinematic, not generic. CTA button: "View My Work." Photo of me (attached). Subtle particle or star background animation. Scanline or grid texture overlay for a retro-game aesthetic. Make it feel like the opening screen of a great indie game.
+
+ABOUT ME:
+Homepage preview: Photo of me, 3–4 sentence version of the bio, 3 HUD-style stat badges.
+Full about.html page: Complete bio + everything below.
+Bio (write in first person, natural and specific, not like a college application):
+I'm Rayane Debbarh, a junior at Alma College majoring in Computer Science with a minor in Business Administration. I'm originally from Morocco and compete on Alma's varsity swim team. I'm certified in Roblox Studio after completing "The Complete 2026 Roblox Studio Masterclass" on Udemy, and I've built two Roblox games: The Lost Oasis, an adventure game set in a desert world, and Sky Obby, a five-stage obstacle course floating above snowy mountains. I'm active on campus and part of several clubs where I hold leadership roles in some. I'm passionate about game development and building experiences that people actually want to play.
+Make this feel genuine and conversational — like I'm talking to someone at a studio, not writing a cover letter. Keep it tight (5–6 sentences max). Don't add anything I haven't told you.
+Stat badges (styled like game HUD elements):
+"5+ Projects" · "3+ Languages" · "Roblox Studio Certified"
+
+WORK EXPERIENCE:
+Homepage preview: Show 2 most recent/impressive entries in a compact timeline style, "View All" button.
+Full experience.html page: Vertical timeline with all entries, full descriptions pulled from my attached screenshots. Do not invent or generalize — use exactly what I provide.
+Known entries (details + descriptions in attached screenshots):
+
+Research Fellow — Osgood Center for International Studies, Washington D.C.
+Teaching Assistant — Alma College Computer Science Department
+(Any others shown in my attachments)
+
+
+PROJECTS:
+Homepage preview: 4 cards max — prioritize games first. "Show More" button → projects.html.
+Full projects.html page: All projects, full descriptions, screenshots, tech stack tags, and live links.
+Each project card must have:
+
+Screenshot I provide
+Project title
+Real description (from my attached notes/screenshots — not invented)
+Tech stack tags styled as pill badges
+Clickable "View Project" or "Play" button with real link (use # placeholder if I forget to provide one)
+
+Games (featured most prominently — large cards, Steam-store feel):
+
+The Lost Oasis — Roblox Studio — desert adventure game
+Sky Obby — Roblox Studio — five-stage obstacle course above snowy mountains
+2D Multiplayer Fighting Game — Python/Pygame — most prominent card
+etc... (Library system, AI API, etc..)
+
+Other CS Projects (smaller cards, 3-column grid):
+
+Employee Task Manager — Java
+Personal Portfolio Website — HTML/CSS/JS
+(Space for more)
+
+
+EXTRACURRICULAR ACTIVITIES:
+Homepage preview: 2–3 highlights (swim team + one or two clubs), "View All" button.
+Full extracurricular.html page: Everything listed, with descriptions from my attached screenshots.
+Known entries:
+
+Varsity Swim Team — Alma College
+Campus clubs where I hold leadership positions (details in attached screenshots)
+(Any others shown in attachments)
+
+Do not list specific club positions in the homepage bio — just say I'm involved in clubs where I hold some leadership roles. Full details go on extracurricular.html only.
+
+SKILLS:
+Homepage preview: Compact visual grouping of top skills, "View All" button.
+Full skills.html page: Complete skill tree layout — styled like a game character's inventory or HUD panel. Grouped into:
+
+Languages: Python, Java, HTML/CSS/JS, SQL
+Tools & Engines: Pygame, Roblox Studio, Git, VS Code
+Concepts: OOP, Data Structures, Agile
+Certifications: Roblox Studio Masterclass — Udemy (2026)
+
+Use icon badges or pill tags — not a resume bullet list.
+
+CONTACT SECTION (on homepage and every page footer):
+Short, direct, human — not "feel free to reach out." Something specific and confident. Buttons: Email, LinkedIn, GitHub, Download Resume (placeholder link). Keep it minimal.
+
+AWARDS & HONORS (add as a small distinct section on the homepage and about.html):
+
+🏆 1st Place — Michigan BPA State Conference (Portfolio Website)
+🔬 Posey Global Fellowship — Osgood Center for International Studies, Washington D.C.
+
+
+Technical requirements:
+
+Clean, well-commented HTML/CSS/JS — no frameworks. Google Fonts + Font Awesome fine.
+Shared navbar and footer across all pages (consistent)
+Fully responsive — mobile and desktop
+Smooth scroll, hover effects on all cards, fade-in on scroll animations
+Dark theme only — never breaks into a light theme
+All <img> tags clearly commented so I can swap images easily
+Every project card has a real clickable link or # placeholder
+Visitors should be able to see every project's screenshot AND click through to try or view it
+
+I am attaching:
+
+Photos of me (hero + about sections)
+Screenshots of every project (games + CS projects)
+Screenshots of my work experience, clubs, and extracurricular activities with descriptions
+Any relevant links
+
+Use everything I attach. Don't invent details not in my attachments. Don't use filler. Make every word earn its place.
